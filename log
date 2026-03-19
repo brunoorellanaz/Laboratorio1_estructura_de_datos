@@ -18,3 +18,15 @@ exercises.c:70:41: error: implicit declaration of function ‘popcurrent’; did
       |                                         ^~~~~~~~~~
       |                                         popCurrent
 faf85a8
+Thu Mar 19 07:13:07 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:70:23: error: ‘elmento’ undeclared (first use in this function); did you mean ‘elemento’?
+   70 |          if ((*(int*) elmento) == elem) popCurrent( L );
+      |                       ^~~~~~~
+      |                       elemento
+exercises.c:70:23: note: each undeclared identifier is reported only once for each function it appears in
+cb7675d
