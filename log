@@ -87,3 +87,15 @@ Thu Mar 19 07:37:22 PM UTC 2026:
  tests:  2|3
 total_score: 30/70
 a902e83
+Thu Mar 19 07:44:32 PM UTC 2026: 
+ exercises.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:64:21: error: implicit declaration of function ‘firs’; did you mean ‘first’? [-Wimplicit-function-declaration]
+   64 |    void* elemento = firs(L);
+      |                     ^~~~
+      |                     first
+exercises.c:64:21: error: initialization of ‘void *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+bfe7a1d
