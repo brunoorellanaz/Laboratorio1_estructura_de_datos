@@ -44,3 +44,15 @@ exercises.c:72:25: error: expected ‘;’ before ‘}’ token
    74 | }
       | ~                        
 7a54de0
+Thu Mar 19 07:14:39 PM UTC 2026: 
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:72:25: error: expected ‘;’ before ‘}’ token
+   72 |       elemento = next(L)
+      |                         ^
+      |                         ;
+   73 | 
+   74 | }
+      | ~                        
+3b58b45
