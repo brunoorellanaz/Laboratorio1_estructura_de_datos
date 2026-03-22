@@ -314,3 +314,60 @@ exercises.c:130:4: error: control reaches end of non-void function [-Werror=retu
       |    ^
 cc1: all warnings being treated as errors
 ea8add6
+Sun Mar 22 01:50:26 AM UTC 2026: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:123:34: error: passing argument 1 of ‘get_size’ from incompatible pointer type [-Wincompatible-pointer-types]
+  123 |    for (int i = 0; i < get_size( (char*)cadena) ; i++){
+      |                                  ^~~~~~~~~~~~~
+      |                                  |
+      |                                  char *
+In file included from exercises.c:6:
+arraylist.h:35:20: note: expected ‘List *’ but argument is of type ‘char *’
+   35 | int get_size(List *L);
+      |              ~~~~~~^
+exercises.c:124:27: error: invalid type argument of unary ‘*’ (have ‘int’)
+  124 |       if ( strcmp( (char*)*cadena[i] , '(')){
+      |                           ^~~~~~~~~~
+exercises.c:124:40: error: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  124 |       if ( strcmp( (char*)*cadena[i] , '(')){
+      |                                        ^~~
+      |                                        |
+      |                                        int
+In file included from test.c:3:
+/nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/string.h:156:50: note: expected ‘const char *’ but argument is of type ‘int’
+  156 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+exercises.c:126:7: error: expected ‘}’ before ‘else’
+  126 |       else if(strcmp( (char*) *cadena[i], ')')) {
+      |       ^~~~
+exercises.c:126:31: error: invalid type argument of unary ‘*’ (have ‘int’)
+  126 |       else if(strcmp( (char*) *cadena[i], ')')) {
+      |                               ^~~~~~~~~~
+exercises.c:126:43: error: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  126 |       else if(strcmp( (char*) *cadena[i], ')')) {
+      |                                           ^~~
+      |                                           |
+      |                                           int
+/nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/string.h:156:50: note: expected ‘const char *’ but argument is of type ‘int’
+  156 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+exercises.c: At top level:
+exercises.c:132:4: error: expected identifier or ‘(’ before ‘if’
+  132 |    if (abiertos == cerrados) return 1;
+      |    ^~
+exercises.c:133:4: error: expected identifier or ‘(’ before ‘else’
+  133 |    else return 0;
+      |    ^~~~
+exercises.c:134:1: error: expected identifier or ‘(’ before ‘}’ token
+  134 | }
+      | ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:130:4: error: control reaches end of non-void function [-Werror=return-type]
+  130 |    }
+      |    ^
+cc1: all warnings being treated as errors
+adcc313
