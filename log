@@ -259,3 +259,58 @@ exercises.c:130:4: error: control reaches end of non-void function [-Werror=retu
       |    ^
 cc1: all warnings being treated as errors
 52f513f
+Sun Mar 22 01:49:42 AM UTC 2026: 
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:123:33: error: passing argument 1 of ‘get_size’ makes pointer from integer without a cast [-Wint-conversion]
+  123 |    for (int i = 0; i < get_size(*cadena) ; i++){
+      |                                 ^~~~~~~
+      |                                 |
+      |                                 char
+In file included from exercises.c:6:
+arraylist.h:35:20: note: expected ‘List *’ but argument is of type ‘char’
+   35 | int get_size(List *L);
+      |              ~~~~~~^
+exercises.c:124:19: error: invalid type argument of unary ‘*’ (have ‘int’)
+  124 |       if ( strcmp(*cadena[i] , '(')){
+      |                   ^~~~~~~~~~
+exercises.c:124:32: error: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  124 |       if ( strcmp(*cadena[i] , '(')){
+      |                                ^~~
+      |                                |
+      |                                int
+In file included from test.c:3:
+/nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/string.h:156:50: note: expected ‘const char *’ but argument is of type ‘int’
+  156 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+exercises.c:126:7: error: expected ‘}’ before ‘else’
+  126 |       else if(strcmp( *cadena[i], ')')) {
+      |       ^~~~
+exercises.c:126:23: error: invalid type argument of unary ‘*’ (have ‘int’)
+  126 |       else if(strcmp( *cadena[i], ')')) {
+      |                       ^~~~~~~~~~
+exercises.c:126:35: error: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  126 |       else if(strcmp( *cadena[i], ')')) {
+      |                                   ^~~
+      |                                   |
+      |                                   int
+/nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/string.h:156:50: note: expected ‘const char *’ but argument is of type ‘int’
+  156 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+exercises.c: At top level:
+exercises.c:132:4: error: expected identifier or ‘(’ before ‘if’
+  132 |    if (abiertos == cerrados) return 1;
+      |    ^~
+exercises.c:133:4: error: expected identifier or ‘(’ before ‘else’
+  133 |    else return 0;
+      |    ^~~~
+exercises.c:134:1: error: expected identifier or ‘(’ before ‘}’ token
+  134 | }
+      | ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:130:4: error: control reaches end of non-void function [-Werror=return-type]
+  130 |    }
+      |    ^
+cc1: all warnings being treated as errors
+ea8add6
