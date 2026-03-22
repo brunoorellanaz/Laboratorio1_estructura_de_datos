@@ -120,10 +120,10 @@ int parentesisBalanceados(char *cadena) {
    int cerrados = 0;
    int abiertos = 0;
 
-   for (int i = 0; i < get_size( (char*)cadena) ; i++){
-      if ( strcmp( (char*)*cadena[i] , '(')){
+   for (int i = 0; i < get_size( *(char*)cadena) ; i++){
+      if ( strcmp( *(char*)cadena[i] , '(')){
          abiertos++;
-      else if(strcmp( (char*) *cadena[i], ')')) {
+      else if(strcmp( *(char*)cadena[i], ')')) {
          cerrados++;
          }
       } 
