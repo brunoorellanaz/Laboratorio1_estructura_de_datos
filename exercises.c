@@ -116,6 +116,7 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
+   //COntar por separados par abiertos y cerrados, y despues ver si estos nuneros coinciden.
    return 0;
 }
 
