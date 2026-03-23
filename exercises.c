@@ -117,19 +117,27 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 
 int parentesisBalanceados(char *cadena) {
    //COntar por separados par abiertos y cerrados, y despues ver si estos nuneros coinciden.
-   int cerrados = 0;
-   int abiertos = 0;
 
-   for (int i = 0; i < get_size( *(char*)cadena) ; i++){
-      if ( strcmp( *(char*)cadena[i] , '(')){
-         abiertos++;
-      else if(strcmp( *(char*)cadena[i], ')')) {
-         cerrados++;
-         }
-      } 
+   Stack * aux = create_stack();
+   int i = 0;
+   while (cadena[i] != '\0'){
+      if (cadena[i] == '(' ||
+          cadena[i] == '[' ||
+          cadena[i] == '{') pushBack(aux, candena[i]);
+      else if( cadena[i] == ')' ||
+               cadena[i] == ']' ||
+               cadena[i] == '}') {
+         if ( top(aux) == NULL ) return 0;
+         if ( *(char*) top(aux) == '(' ||
+              *(char*) top(aux) == '[' ||
+              *(char*) top(aux) == '{') pop(aux);
+         return 0;
+      }
+      
+      i++;
+         
    }
-
-   if (abiertos == cerrados) return 1;
-   else return 0;
+   if ( top(aux) == NULL) return 1;  
+   return 0;
 }
 
