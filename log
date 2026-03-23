@@ -456,3 +456,15 @@ exercises.c:126:43: error: ‘candena’ undeclared (first use in this function)
       |                                           cadena
 exercises.c:126:43: note: each undeclared identifier is reported only once for each function it appears in
 caad8eb
+Mon Mar 23 12:12:40 AM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:126:44: error: ‘candena’ undeclared (first use in this function); did you mean ‘cadena’?
+  126 |           cadena[i] == '{') pushBack(aux, &candena[i]);
+      |                                            ^~~~~~~
+      |                                            cadena
+exercises.c:126:44: note: each undeclared identifier is reported only once for each function it appears in
+0b66497
