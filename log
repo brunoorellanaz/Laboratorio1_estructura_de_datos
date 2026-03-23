@@ -494,3 +494,9 @@ exercises.c:126:43: error: invalid type argument of unary ‘*’ (have ‘int�
   126 |           cadena[i] == '{') pushBack(aux, *cadena[i]);
       |                                           ^~~~~~~~~~
 f3fc633
+Mon Mar 23 12:13:20 AM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|1
+total_score: 50/70
+2fdbb75
