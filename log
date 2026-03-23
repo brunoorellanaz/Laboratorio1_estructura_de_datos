@@ -484,3 +484,13 @@ arraylist.h:20:30: note: expected ‘void *’ but argument is of type ‘char�
    20 | void pushBack(List *L, void *dato);
       |                        ~~~~~~^~~~
 17c3242
+Mon Mar 23 12:13:09 AM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:126:43: error: invalid type argument of unary ‘*’ (have ‘int’)
+  126 |           cadena[i] == '{') pushBack(aux, *cadena[i]);
+      |                                           ^~~~~~~~~~
+f3fc633
